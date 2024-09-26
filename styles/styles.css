@@ -110,6 +110,7 @@ button::-moz-focus-inner {
 body {
     font-family: 'GothamPro', Arial;
     background-color: #171422;
+    overflow-x: hidden;
 }
 
 .container {
@@ -367,7 +368,7 @@ body {
 
 .images__graph_top {
     position: absolute;
-    left: 45%;
+    left: 42%;
     top: 0;
     display: flex;
     align-items: center;
@@ -473,4 +474,50 @@ body {
 
 #card4 {
     background: url('/assets/img/sidebar/card1.jpeg');
+}
+
+/* floating */
+
+.floating {
+    margin-top: 80px;
+}
+
+.floating__row {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+}
+
+#floating__row1 {
+    animation: sliderRight 180s infinite linear;
+    margin-bottom: 20px;
+}
+
+#floating__row2 {
+    animation: sliderLeft 180s infinite linear;
+    margin-bottom: 240px;
+}
+
+.floating__row_item {
+    border-radius: 20px;
+}
+
+@keyframes sliderRight {
+    0%{
+        transform: translate(calc(-100% + 100vw), 0);
+    }
+
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes sliderLeft {
+    0%{
+        transform: translate(0, 0);
+    }
+
+    100%{
+        transform: translate(calc(-100% + 100vw), 0);
+    }
 }
